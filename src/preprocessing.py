@@ -1,19 +1,33 @@
 import pandas as pd
 
-def mapping (data : list, columns : list, start = 0 : int, is_default = True : bool, default_value = -1 : int) :
-    '''
+if (__name__ == "__main__") : 
+
+    filepath = "" # setting
+    df = pd.read_csv (filepath)
+
+    print(df.columns)
+
+    for col in df.columns :
+        print(col)
+        print(df[col].unique())
+        print()
+
     
-    '''
+    # drop
+    drop_columns = [] # setting 
+    df = df.drop()
+
+
+    # Nan.
+    nan_columns = [] # setting
+    for col in nan_columns : 
+        df[col].fillna(-1, inplace = True)
+
     
-    size = len(data)
-
-    _map = {}
-    
-    for i in range (size) :
-        _mape[columns[i]] = i + start
-
-    if is_default :
-        _map[columns[columns[size - 1]]] = default_value
-
-    return data.map(_map)
-
+    # mapping
+    column = ""     # setting
+    mapping = {     # setting
+        "data1" : 0,
+        "data2" : 1
+        }
+    df[column] = df[column].map(mapping)
